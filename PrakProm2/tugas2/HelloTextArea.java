@@ -3,27 +3,28 @@ package PrakProm2.tugas2;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class HelloInput extends JFrame {
+public class HelloTextArea extends JFrame {
 
-  public HelloInput() {
+  public HelloTextArea() {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    JLabel labelInput = new JLabel("Input Nama:");
-    labelInput.setBounds(130, 100, 100, 10);
 
+    JLabel labelInput = new JLabel("Input Nama:");
+    labelInput.setBounds(130, 40, 100, 10); 
     JTextField textField = new JTextField();
-    textField.setBounds(130, 100, 300, 40);
+    textField.setBounds(130, 60, 100, 30); 
 
     JButton button = new JButton("klik");
-    button.setBounds(130, 100, 40, 40);
+    button.setBounds(130, 100, 100, 40); 
 
-    JLabel labelOutput = new JLabel("");
-    labelOutput.setBounds(130, 150, 100, 10);
+    JTextArea txtOutput = new JTextArea(); 
+    txtOutput.setBounds(130, 150, 100, 100); 
 
     button.addActionListener(
       new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           String nama = textField.getText();
-          labelOutput.setText("Hello " + nama);
+          txtOutput.append("Hello " + nama + "\n"); 
+          textField.setText(""); 
         }
       }
     );
@@ -31,7 +32,7 @@ public class HelloInput extends JFrame {
     this.add(button);
     this.add(textField);
     this.add(labelInput);
-    this.add(labelOutput);
+    this.add(txtOutput); 
 
     this.setSize(400, 500);
     this.setLayout(null);
@@ -41,7 +42,7 @@ public class HelloInput extends JFrame {
     javax.swing.SwingUtilities.invokeLater(
       new Runnable() {
         public void run() {
-          HelloInput h = new HelloInput();
+          HelloTextArea h = new HelloTextArea(); 
           h.setVisible(true);
         }
       }

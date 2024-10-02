@@ -3,29 +3,28 @@ package PrakProm2.tugas2;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class HelloTextArea extends JFrame {
+public class HelloInput extends JFrame {
 
-  public HelloTextArea() {
+  public HelloInput() {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     JLabel labelInput = new JLabel("Input Nama:");
-    labelInput.setBounds(130, 40, 100, 10); // Adjusted position
+    labelInput.setBounds(130, 40, 100, 10);
 
     JTextField textField = new JTextField();
-    textField.setBounds(130, 60, 100, 30); // Adjusted position
+    textField.setBounds(130, 60, 100, 30);
 
     JButton button = new JButton("klik");
-    button.setBounds(130, 100, 100, 40); // Adjusted position
+    button.setBounds(130, 100, 100, 40);
 
-    JTextArea txtOutput = new JTextArea(); // Changed from JLabel to JTextArea
-    txtOutput.setBounds(130, 150, 100, 100); // Adjusted position
+    JLabel labelOutput = new JLabel("");
+    labelOutput.setBounds(130, 150, 100, 10);
 
     button.addActionListener(
       new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           String nama = textField.getText();
-          txtOutput.append("Hello " + nama + "\n"); // Updated to append text
-          textField.setText(""); // Clear the text field after input
+          labelOutput.setText("Hello " + nama);
         }
       }
     );
@@ -33,7 +32,7 @@ public class HelloTextArea extends JFrame {
     this.add(button);
     this.add(textField);
     this.add(labelInput);
-    this.add(txtOutput); // Added JTextArea to the frame
+    this.add(labelOutput);
 
     this.setSize(400, 500);
     this.setLayout(null);
@@ -43,7 +42,7 @@ public class HelloTextArea extends JFrame {
     javax.swing.SwingUtilities.invokeLater(
       new Runnable() {
         public void run() {
-          HelloTextArea h = new HelloTextArea(); // Updated class name
+          HelloInput h = new HelloInput();
           h.setVisible(true);
         }
       }

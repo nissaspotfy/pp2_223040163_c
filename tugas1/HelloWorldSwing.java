@@ -1,4 +1,4 @@
-package PrakProm2.tugas1;
+package tugas1;
 
 import javax.swing.*;
 
