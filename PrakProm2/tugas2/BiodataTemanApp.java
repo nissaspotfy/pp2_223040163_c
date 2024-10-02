@@ -3,36 +3,28 @@ package PrakProm2.tugas2;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class BiodataTemanApp {
   public static void main(String[] args) {
-    
+    // Membuat frame
     JFrame frame = new JFrame("Biodata Temanku");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setSize(500, 400);
     frame.setLayout(new BorderLayout());
 
-    
-    JPanel panel = new JPanel();
-    panel.setLayout(new GridBagLayout());
+    // Menggunakan GridBagLayout untuk tata letak yang fleksibel
+    JPanel panel = new JPanel(new GridBagLayout());
     GridBagConstraints gbc = new GridBagConstraints();
-    gbc.insets = new Insets(5, 5, 5, 5);
-    gbc.fill = GridBagConstraints.HORIZONTAL; 
+    gbc.insets = new Insets(5, 5, 5, 5); // Margin di sekitar elemen
+    gbc.fill = GridBagConstraints.HORIZONTAL;
 
-   
-    panel.setBackground(Color.LIGHT_GRAY);
-    frame.getContentPane().setBackground(Color.LIGHT_GRAY);
-
-    
+    // Komponen form
     JLabel labelNama = new JLabel("Nama:");
     JTextField textNama = new JTextField(20);
 
-    
     JLabel labelHP = new JLabel("Nomor HP:");
     JTextField textHP = new JTextField(20);
 
-    
     JLabel labelJenisKelamin = new JLabel("Jenis Kelamin:");
     JRadioButton rbLakiLaki = new JRadioButton("Laki-Laki");
     JRadioButton rbPerempuan = new JRadioButton("Perempuan");
@@ -40,93 +32,78 @@ public class BiodataTemanApp {
     bgJenisKelamin.add(rbLakiLaki);
     bgJenisKelamin.add(rbPerempuan);
 
-    
     JCheckBox cbWNA = new JCheckBox("Warga Negara Asing");
 
-    
     JButton buttonSimpan = new JButton("Simpan");
 
-   
-    JTextArea outputArea = new JTextArea(8, 40);
+    JTextArea outputArea = new JTextArea(5, 35);
     outputArea.setEditable(false);
-
-    
-    outputArea.setBackground(Color.WHITE);
-
     JScrollPane scrollPane = new JScrollPane(outputArea);
 
-   
+    // Menambahkan komponen ke panel dengan GridBagLayout
     gbc.gridx = 0;
     gbc.gridy = 0;
+    gbc.gridwidth = 2;
     panel.add(labelNama, gbc);
 
-    gbc.gridx = 0;
     gbc.gridy = 1;
+    gbc.gridwidth = 2;
     panel.add(textNama, gbc);
 
-    gbc.gridx = 0;
     gbc.gridy = 2;
+    gbc.gridwidth = 2;
     panel.add(labelHP, gbc);
 
-    gbc.gridx = 0;
     gbc.gridy = 3;
     panel.add(textHP, gbc);
 
-    gbc.gridx = 0;
     gbc.gridy = 4;
     panel.add(labelJenisKelamin, gbc);
 
-    gbc.gridx = 0;
     gbc.gridy = 5;
-    panel.add(rbLakiLaki, gbc);
+    gbc.gridwidth = 1;
+    panel.add(rbLakiLaki, gbc); // Menempatkan Laki-Laki di baris 5
+
+    gbc.gridx = 1;
+    panel.add(rbPerempuan, gbc); // Menempatkan Perempuan di baris 5 (sejajar)
 
     gbc.gridx = 0;
     gbc.gridy = 6;
-    panel.add(rbPerempuan, gbc);
+    gbc.gridwidth = 2;
+    panel.add(cbWNA, gbc); // WNA di bawah radio button
 
-    gbc.gridx = 0;
     gbc.gridy = 7;
-    panel.add(cbWNA, gbc);
+    panel.add(buttonSimpan, gbc); // Tombol Simpan di bawah checkbox
 
-    gbc.gridx = 0;
-    gbc.gridy = 8;
-    panel.add(buttonSimpan, gbc);
-
-    
+    // Menambahkan panel ke frame
     frame.add(panel, BorderLayout.NORTH);
     frame.add(scrollPane, BorderLayout.CENTER);
 
-  
-    buttonSimpan.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        String nama = textNama.getText();
-        String hp = textHP.getText();
-        String jenisKelamin = rbLakiLaki.isSelected() ? "Laki-Laki" : rbPerempuan.isSelected() ? "Perempuan" : "";
-        String wna = cbWNA.isSelected() ? "Ya" : "Tidak";
+    // Aksi ketika tombol simpan ditekan
+    buttonSimpan.addActionListener((ActionEvent e) -> {
+      String nama = textNama.getText();
+      String hp = textHP.getText();
+      String jenisKelamin = rbLakiLaki.isSelected() ? "Laki-Laki" : rbPerempuan.isSelected() ? "Perempuan" : "";
+      String wna = cbWNA.isSelected() ? "Ya" : "Tidak";
 
-       
-        if (nama.isEmpty() || hp.isEmpty() || jenisKelamin.isEmpty()) {
-          JOptionPane.showMessageDialog(frame, "Semua data harus diisi!", "Error", JOptionPane.ERROR_MESSAGE);
-          return;
-        }
-
-      
-        outputArea.append("Nama         : " + nama + "\n");
-        outputArea.append("Nomor HP     : " + hp + "\n");
-        outputArea.append("Jenis Kelamin: " + jenisKelamin + "\n");
-        outputArea.append("WNA          : " + wna + "\n");
-        outputArea.append("============================================\n");
-
-  
-        textNama.setText("");
-        textHP.setText("");
-        bgJenisKelamin.clearSelection();
-        cbWNA.setSelected(false);
+      // Validasi input
+      if (nama.isEmpty() || hp.isEmpty() || jenisKelamin.isEmpty()) {
+        JOptionPane.showMessageDialog(frame, "Semua data harus diisi!", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
       }
+
+      // Menampilkan output ke JTextArea
+      outputArea.append(String.format(
+          "Nama         : %s\nNomor HP     : %s\nJenis Kelamin: %s\nWNA          : %s\n============================================\n",
+          nama, hp, jenisKelamin, wna));
+
+      // Reset form setelah menyimpan
+      textNama.setText("");
+      textHP.setText("");
+      bgJenisKelamin.clearSelection();
+      cbWNA.setSelected(false);
     });
 
- 
     frame.setVisible(true);
   }
 }
