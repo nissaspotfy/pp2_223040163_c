@@ -1,4 +1,4 @@
-package PrakProm2.tugas2;
+package PrakProm2.pertemuan2;
 
 import javax.swing.*;
 import java.awt.*;
