@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package PrakProm2.pertemuan3;
 
 import java.awt.*;
@@ -57,63 +57,4 @@ public class HelloBorderLayout extends JFrame {
 
 
 
-=======
-package PrakProm2.pertemuan3;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-public class HelloBorderLayout extends JFrame {
-    public HelloBorderLayout() {
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        JLabel labelPertanyaan = new JLabel("Apakah Ibukota Indonesia?");
-        JLabel labelHasil = new JLabel("Jawab Pertanyaan di Atas");
-
-        JButton buttonA = new JButton("Jakarta");
-        JButton buttonB = new JButton("Bandung");
-        JButton buttonC = new JButton("Surabaya");
-
-        buttonA.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                labelHasil.setText("Jawaban Anda Benar");
-            }
-        });
-
-        buttonB.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                labelHasil.setText("Jawaban anda salah");
-            }
-        });
-
-        buttonC.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                labelHasil.setText("Jawaban anda salah");
-            }
-        });
-
-        this.add(labelPertanyaan, BorderLayout.NORTH);
-        this.add(labelHasil, BorderLayout.SOUTH);
-        this.add(buttonA, BorderLayout.WEST);
-        this.add(buttonB, BorderLayout.CENTER);
-        this.add(buttonC, BorderLayout.EAST);
-        this.setSize(400, 200);
-    }
-
-    public static void main(String[] args) {
-        javax.swing.SwingUtilities.invokeLater(new Runnable(){
-            public void run(){
-                HelloBorderLayout h = new HelloBorderLayout();
-                h.setVisible(true);
-            }
-        });
-
-    }
-}
-
-
-
-
-
->>>>>>> 9a9970240ac7fea3d4eb7af3c9471db63ce66590
