@@ -32,7 +32,7 @@ public class WindowListenerExample {
             public void windowActivated(WindowEvent e) {}
             public void windowDeactivated(WindowEvent e) {}
         });
-
+l
         frame.add(label);
         frame.setSize(400, 200);
         frame.setLayout(null);
