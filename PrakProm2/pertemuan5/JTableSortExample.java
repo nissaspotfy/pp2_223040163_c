@@ -10,9 +10,9 @@ public class JTableSortExample {
 
     String[] columnNames = { "ID", "Name", "Age" };
     Object[][] data = {
-      { 1, "John", 25 },
-      { 3, "Mike", 35 },
-      { 2, "Anna", 30 },
+      { 1, "nissa", 18 },
+      { 3, "yesiika", 18 },
+      { 2, "ica", 18 },
     };
 
     DefaultTableModel model = new DefaultTableModel(data, columnNames);
