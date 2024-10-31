@@ -1,0 +1,210 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "HelloWorldSwing",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan1.HelloWorldSwing",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "BiodataTemanAppLengkap",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.BiodataTemanAppLengkap",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "BiodataTemenApp",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.BiodataTemenApp",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "ButtonEventSwing",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.ButtonEventSwing",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "FormNasabahBank",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.FormNasabahBank",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloCheckBox",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.HelloCheckBox",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloInput",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.HelloInput",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloRadioButton",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.HelloRadioButton",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloTextArea",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan2.HelloTextArea",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "BiodataSaya",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan3.BiodataSaya",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloBorderLayout",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan3.HelloBorderLayout",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloFlowLayout",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan3.HelloFlowLayout",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloGridBagLayout",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan3.HelloGridBagLayout",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "HelloGridLayout",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan3.HelloGridLayout",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "ButtonExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan4.ButtonExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "KeyListenerExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan4.KeyListenerExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "MouseListenerExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan4.MouseListenerExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "WindowListenerExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan4.WindowListenerExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "ComboBoxExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.ComboBoxExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "ComboBoxModelExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.ComboBoxModelExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "DynamicJListExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.DynamicJListExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "JLabelHTMLExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.JLabelHTMLExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "JListExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.JListExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "JTableAddRemoveRowExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.JTableAddRemoveRowExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "JTableEditableExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.JTableEditableExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "JTableExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.JTableExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "JTableSortExample",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan5.JTableSortExample",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "LibraryApp",
+      "request": "launch",
+      "mainClass": "PrakProm2.pertemuan6.tugas.LibraryApp",
+      "projectName": "PrakProm2_9e6d20f9"
+    }
+  ]
+}
