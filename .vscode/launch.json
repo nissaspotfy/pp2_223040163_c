@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PeminjamanBukuApp",
+      "request": "launch",
+      "mainClass": "PrakProm2.tugas3.PeminjamanBukuApp",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "FormPeminjamanBuku",
+      "request": "launch",
+      "mainClass": "PrakProm2.tugas3.FormPeminjamanBuku",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
+      "name": "LibraryApp",
+      "request": "launch",
+      "mainClass": "PrakProm2.tugas3.LibraryApp",
+      "projectName": "PrakProm2_9e6d20f9"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}"
