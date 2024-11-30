@@ -11,6 +11,23 @@ import model.Member;
 import model.JenisMember;
 
 public class MemberDao {
+  public int insert(Member member) {
+    int result = -1;
+    try {
+      Connection connection = MySqlConnection.getInstance().getConnection();
+      PreparedStatement statement = connection
+          .prepareStatement("insert into member (id, nama, jenis_member_id) values (?,?, ?) ");
+      statement.setString(2, member.getNama());
+      statement.setString(3, member.getJenisMember().getId());
+      statement.setString(1, member.getId());
+
+      result = statement.executeUpdate();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return result;
+  }
+
   public int update(Member member) {
     int result = -1;
     try {

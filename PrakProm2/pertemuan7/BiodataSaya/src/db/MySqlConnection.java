@@ -1,11 +1,10 @@
-package db;
+package pertemuan7.BiodataSaya.src.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class MySqlConnection {
-  private final static String DB_URL = "jdbc:mysql://localhost:3306/pp2_membership";
+  private final static String DB_URL = "jdbc:mysql://localhost:3306/pp2_biodatasaya";
   private final static String DB_USER = "root";
   private final static String DB_PASS = "";
 
@@ -21,9 +20,10 @@ public class MySqlConnection {
   public Connection getConnection() {
     Connection connection = null;
     try {
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-    } catch (SQLException e) {
-      e.getMessage();
+    } catch (Exception e) {
+      e.printStackTrace();
     }
     return connection;
   }

@@ -67,10 +67,10 @@ public List<JenisMember> findAll(){
           list.add(jenisMember);
         }
       } catch (SQLException e) {
-        e.printStackTrace();
+        e.getMessage();
       }
     } catch (SQLException e) {
-        e.printStackTrace();
+        e.getMessage();
       }
       return list;
     }

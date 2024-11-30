@@ -1,8 +1,6 @@
 package view.jenismember;
 
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.table.*;
 import java.util.*;
 import model.JenisMember;
 import dao.JenisMemberDao;
@@ -12,7 +10,7 @@ public class JenisMemberFrame extends JFrame {
   private JTextField textFieldNama;
   private JTable table;
   private JenisMemberTableModel tableModel;
-  private JenisMemberDao jenisMemberDao;
+  private final JenisMemberDao jenisMemberDao;
 
   public JenisMemberFrame(JenisMemberDao jenisMemberDao) {
     this.jenisMemberDao = jenisMemberDao;
@@ -45,7 +43,7 @@ public class JenisMemberFrame extends JFrame {
 
     this.setSize(400, 500);
     this.setLayout(null);
-    this.setVisible(true);
+
   }
 
   public String getNama() {

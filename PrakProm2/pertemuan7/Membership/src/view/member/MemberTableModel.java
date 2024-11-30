@@ -12,10 +12,12 @@ class MemberTableModel extends AbstractTableModel {
     this.data = data;
   }
 
+
+  @Override
   public int getColumnCount() {
     return columnNames.length;
   }
-
+  @Override
   public int getRowCount() {
     return data.size();
   }
